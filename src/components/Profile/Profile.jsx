@@ -13,16 +13,16 @@ export const Profile =  ({username, tag, location, avatar, stats: {label, quanti
 
   <ul className="stats">
     <li>
-      <span className={label}>Followers</span>
-      <span className={quantity}>1000</span>
+      <span className="label">{label}</span>
+      <span className="quantity">{quantity}</span>
     </li>
     <li>
-      <span className={label}>Views</span>
-      <span className={quantity}>2000</span>
+      <span className="label">{label}</span>
+      <span className="quantity">{quantity}</span>
     </li>
     <li>
-      <span className={label}>Likes</span>
-      <span className={quantity}>3000</span>
+      <span className="label">{label}</span>
+      <span className="quantity">{quantity}</span>
     </li>
   </ul>
 </div>
