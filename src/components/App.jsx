@@ -1,5 +1,5 @@
 import { Profile } from "./Profile/Profile";
-
+import user from '../dataJson/user.json'
 export const App = () => {
   return (
     <div
@@ -13,7 +13,7 @@ export const App = () => {
       }}
     >
     
-    <Profile />
+    <Profile user={user}/>
     </div>
   );
 };
