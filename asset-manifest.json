@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/css/main.7acaea2f.css",
-    "main.js": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/js/main.0827b00f.js",
+    "main.js": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/js/main.cacf4025.js",
     "index.html": "/IgorZhyvotkov/goit-react-hw-01-components.git/index.html",
     "main.7acaea2f.css.map": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/css/main.7acaea2f.css.map",
-    "main.0827b00f.js.map": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/js/main.0827b00f.js.map"
+    "main.cacf4025.js.map": "/IgorZhyvotkov/goit-react-hw-01-components.git/static/js/main.cacf4025.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.0827b00f.js"
+    "static/js/main.cacf4025.js"
   ]
 }
