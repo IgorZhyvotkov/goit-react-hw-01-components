@@ -1,4 +1,14 @@
 import PropTypes from 'prop-types';
+import {
+  ProfileCard,
+  ProfileImg,
+  ProfileName,
+  ProfileTag,
+  ProfileStats,
+  ProfileStatsItem,
+  ProfileStatsText
+} from './Profile.styled';
+
 export const Profile = ({
   userData: {
     username,
@@ -9,29 +19,29 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div className="profile">
+    <ProfileCard>
       <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+        <ProfileImg src={avatar} alt="User avatar" className="avatar" />
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>{tag}</ProfileTag>
+        <ProfileTag>{location}</ProfileTag>
       </div>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ProfileStats>
+        <ProfileStatsItem>
+          <ProfileStatsText >Followers</ProfileStatsText>
+          <ProfileStatsText>{followers}</ProfileStatsText>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileStatsText >Views</ProfileStatsText>
+          <ProfileStatsText >{views}</ProfileStatsText>
+        </ProfileStatsItem>
+        <ProfileStatsItem>
+          <ProfileStatsText >Likes</ProfileStatsText>
+          <ProfileStatsText >{likes}</ProfileStatsText>
+        </ProfileStatsItem>
+      </ProfileStats>
+    </ProfileCard>
   );
 };
 
