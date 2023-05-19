@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import { FriendsListItem, FriendsListMarker, } from './FriendListItem.styled';
+import { FriendsListItem, FriendsListImg, FriendsListName, FriendsListSvg} from './FriendListItem.styled';
+import { VscAccount } from 'react-icons/vsc';
 export const FriendListItem = ({isOnline, avatar, name,}) => {
   return (
     <FriendsListItem>
-      <FriendsListMarker>{isOnline}</FriendsListMarker>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <FriendsListSvg><VscAccount/>{isOnline}</FriendsListSvg>
+      <FriendsListImg src={avatar} alt="User avatar" width="48" />
+      <FriendsListName>{name}</FriendsListName>
     </FriendsListItem>
   );
 };

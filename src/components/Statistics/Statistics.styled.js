@@ -30,6 +30,7 @@ flex-direction: column;
 width: 90px;
 border: 0.1px solid grey;
 height: 40px;
+background-color: red;
 `;
 
 export const StatisticsStatsText = styled.span`
