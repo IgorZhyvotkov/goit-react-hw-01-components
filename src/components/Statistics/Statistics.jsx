@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { StatisticsSection,StatisticsTitle, StatisticsStats, StatisticsStatsItem, StatisticsStatsText, } from './Statistics.styled';
+import { getRandomHexColor } from 'components/FriendListItem/FriendListItem';
 
 export const Statistics = ({ title, stats }) => {
   return (
@@ -8,7 +9,7 @@ export const Statistics = ({ title, stats }) => {
 
       <StatisticsStats>
         {stats.map(({ id, label, percentage }) => (
-          <StatisticsStatsItem key={id}>
+          <StatisticsStatsItem key={id} style={{backgroundColor:  getRandomHexColor()}}>
             <StatisticsStatsText>{label}</StatisticsStatsText>
             <StatisticsStatsText>{percentage}%</StatisticsStatsText>
           </StatisticsStatsItem>
@@ -20,5 +21,9 @@ export const Statistics = ({ title, stats }) => {
 
 Statistics.propTypes = {
   title: PropTypes.string.isRequired,
-  stats: PropTypes.arrayOf(PropTypes.object).isRequired, 
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  })).isRequired, 
 };
